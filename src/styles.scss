@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+h1, h2, h3, h4, p , button, input{
+  font-family: 'Quicksand', sans-serif;
+}
+
+// colors
+$redPrincipal: #E86060;
+$darkRedSecondary: #662323 ;
+$SoftGray: #BDBDBD;
+$gray: #828282;
+$lightRed: #FF7676;
+$color-font: #C4C4C4;
+
+// font
+.regular-one {
+  font-size: 16px;
+  line-height: 20px;
+}
+.regular-two {
+  font-size: 14px;
+  line-height: 17px;
+}
+.regular-three {
+  font-size: 12px;
+  line-height: 20px;
+}
+.regular-qs {
+  font-size: 12px;
+  line-height: 15px;
+}
+.bolt-one {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+}
+.bol-qs {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}

@@ -1,0 +1,93 @@
+<!--
+Development : Yefer Frank Huansha Leyva
+Fecha: Mmiercoles, 14 abril de 2021
+-->
+<div class="content">
+  <nav [ngClass]="{nocheck:!check, check:check}">
+    <app-main-nav></app-main-nav>
+  </nav>
+  <div class="content-music">
+    <div class="d-flex  jcs heading-nav">
+      <div class="menu-mobile">
+        <div (click)="mostarOcultar()" ><i class="fas fa-bars"></i></div>
+      </div>
+      <div class="search d-flex">
+        <input type="text" placeholder="Buscar">
+        <span><i class="fas fa-search"></i></span>
+      </div>
+      <div class="usr d-flex">
+        <span><i class="fas fa-user-alt"></i></span>
+        <h4 class="name-usr">Francisco M.</h4>
+      </div>
+    </div>
+    <div class="banner-video-detail">
+      <div class="box-music">
+        <button class="btn-play">
+          <i class="fas fa-play"></i>
+        </button>
+        <img class="cover-page-music" src="https://s3.amazonaws.com/virginia.webrand.com/virginia/344/pGRntGEw72Z/69ee62801052192491bf9e9ec4adfe26.jpg?1603781877" alt="">
+      </div>
+      <div class="img-banner-cover-page">
+        <div class="background"></div>
+        <div class="info-music">
+          <h1 class="bolt-one">Adele 21</h1>
+          <div class="d-flex">
+            <span class="regular-two info-more">Lo mejor de Adele</span>
+            <span class="inf-fans">321, 123 seguidores</span>
+          </div>
+          <p class="description">{{description}}</p>
+          <div class="btns-play-music d-flex">
+            <button type="submit">Reproducir</button>
+            <button type="submit">Seguir</button>
+            <div class="three">
+              <div *ngFor="let i of [1,1,1]"></div>
+            </div>
+          </div>
+        </div>
+        <img src="https://res.cloudinary.com/unjfsc/image/upload/v1618450461/Foxbel-Music/adele-wallpaper_e9tqbf.png" alt="">
+      </div>
+    </div>
+    <div class="resultados">
+      <h1 class="bolt-one">Resultados</h1>
+      <div class="content-list-music">
+        <div class="box-r-music" *ngFor="let i of [1,1,1,1,1]">
+          <div class="portada-option-play" >
+            <button class="btn-r-play">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="options">
+              <div *ngFor="let i of [1,1,1]"></div>
+            </div>
+            <img src="https://img.freepik.com/foto-gratis/vista-aerea-auriculares-conectados-telefono-celular-sobre-fondo-amarillo_23-2147926827.jpg?size=626&ext=jpg" alt="">
+          </div>
+          <div class="info-music-author">
+            <h1 class="name-music bol-qs">The 20 20 Experience</h1>
+            <h2 class="name-author regular-qs">Jessie J</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer d-flex">
+    <div class="wrap-1 d-flex">
+      <img src="https://www.cice.es/wp-content/uploads/2018/05/imagen-destacada-5.jpg" alt="">
+      <div class="section-info-music-author">
+        <h3 class="bol-qs">Canción</h3>
+        <h4 class="regular-qs">Artista - Álbum</h4>
+      </div>
+    </div>
+    <div class="wrap-2">
+      <div class="section-play d-flex">
+        <button class="left"><span></span></button>
+        <button class="play-btn"><i class="fas fa-play"></i></button>
+        <button class="right"><span></span></button>
+      </div>
+    </div>
+    <div class="wrap-3">
+      <div class="vol"></div>
+      <button class="silenciar">
+        <i class="fas fa-volume-off"></i>
+      </button>
+    </div>
+  </div>
+</div>
