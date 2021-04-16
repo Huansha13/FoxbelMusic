@@ -37,8 +37,4 @@ export class ListMusicComponent implements OnInit {
     this.txtBuscar.nativeElement.value = '';
   }
 
-  setVolume(event: any) {
-    const volume = event.target.value / 100;
-    this.audio.volume = volume;
-  }
 }
