@@ -7,8 +7,13 @@ import {MusicService} from '../../services/music.service';
   styleUrls: ['./list-music.component.scss']
 })
 export class ListMusicComponent implements OnInit {
-  description = 'Adele Laurie Blue Adkins (Tottenham, Londres, Inglaterra, 5 de mayo de 1988), conocida simplemente como Adele, es una cantante, compositora y multinstrumentista británica.8';
+  description: string = '(Tottenham, Londres, Inglaterra, 5 de mayo de 1988), conocida simplemente como Adele, es una cantante, compositora y multinstrumentista británica.8';
   check: boolean = true;
+  name: string = 'Huansha L.';
+  get resul() {
+    return this.musicService.resultadoBaner;
+  }
+
   constructor( private musicService: MusicService ) { }
 
   ngOnInit(): void {
@@ -24,6 +29,7 @@ export class ListMusicComponent implements OnInit {
       return;
     }
     this.musicService.buscarMusic(valor);
+    this.musicService.banerMusic(valor);
     console.log(valor);
     this.txtBuscar.nativeElement.value = '';
   }

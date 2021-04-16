@@ -61,6 +61,19 @@
 }
 /* ------ end contend*/
 
+.write-txt {
+  display: grid;
+  text-align: center;
+  margin-top: 40px;
+  i {
+    font-size: 40px;
+  }
+  span {
+    padding-top: 10px;
+    font-size: 22px;
+  }
+}
+
 /* ---- banner video detail*/
 .banner-video-detail {
   margin-top: 40px;
@@ -77,9 +90,14 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 4px;
   margin: auto;
   cursor: pointer;
+  width: 100%;
+  height: 250px;
+  &:hover {
+    background: rgba(0, 0, 0, .5);
+  }
   i {
     color: #FFFFFF;
     font-size: 63px;
@@ -90,14 +108,17 @@
   height: 250px;
   object-fit: cover;
 }
+.img-banner {
+  clip-path: inset(0);
+  height: 250px;
+}
 .img-banner-cover-page {
   position: relative;
-
   img {
     opacity: 0.4;
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    //height: 250px;
+    //object-fit: cover;
   }
 }
 .background {

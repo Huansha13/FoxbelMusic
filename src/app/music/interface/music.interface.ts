@@ -8,12 +8,12 @@
 // match the expected interface, even if the JSON is valid.
 
 export interface DeezerSearch {
-  data:  Datum[];
+  data:  Music[];
   total: number;
   next:  string;
 }
 
-export interface Datum {
+export interface Music {
   id:                      number;
   readable:                boolean;
   title:                   string;

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
+import {DeezerSearch, Music} from '../interface/music.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -9,24 +10,33 @@ export class MusicService {
   private host: string = 'deezerdevs-deezer.p.rapidapi.com';
   private serviceUrl: string = 'https://deezerdevs-deezer.p.rapidapi.com';
 
-  public resultados: any[] = [];
+  public resultados: Music[] = [];
+  public resultadoBaner: Music[] = [];
 
   constructor( private http: HttpClient) { }
 
   buscarMusic( query: string = ''): void {
-
-
     const params = new HttpParams()
       .set('q', query)
       .set('rapidapi-key', this.key)
       .set('rapidapi-host', this.host)
-      .set('limit', '10');
-
-    this.http.get(`${this.serviceUrl}/search`, {params})
-      .subscribe( (resp: any) => {
+      .set('limit', '38');
+    this.http.get<DeezerSearch>(`${this.serviceUrl}/search`, {params})
+      .subscribe( (resp: DeezerSearch) => {
         console.log(resp.data);
         this.resultados = resp.data;
       });
-
+  }
+  banerMusic( query: string = ''): void {
+    const params = new HttpParams()
+      .set('q', query)
+      .set('rapidapi-key', this.key)
+      .set('rapidapi-host', this.host)
+      .set('limit', '1');
+    this.http.get<DeezerSearch>(`${this.serviceUrl}/search`, {params})
+      .subscribe((resp: DeezerSearch) => {
+        console.log(resp.data);
+        this.resultadoBaner = resp.data;
+      });
   }
 }

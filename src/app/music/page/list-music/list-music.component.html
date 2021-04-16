@@ -12,30 +12,34 @@ Fecha: Mmiercoles, 14 abril de 2021
         <div (click)="mostarOcultar()" ><i class="fas fa-bars"></i></div>
       </div>
       <div class="search d-flex">
-        <input type="text" placeholder="Buscar" (keyup.enter)="buscar( )" #txtBuscar>
+        <input type="text" placeholder="Buscar" (keyup.enter)="buscar()" #txtBuscar (click)="show=true">
         <span><i class="fas fa-search"></i></span>
       </div>
       <div class="usr d-flex">
         <span><i class="fas fa-user-alt"></i></span>
-        <h4 class="name-usr">Francisco M.</h4>
+        <h4 class="name-usr">{{name}}</h4>
       </div>
     </div>
-    <div class="banner-video-detail">
+    <div class="write-txt" *ngIf="!show">
+      <i class="fas fa-headphones-alt"></i>
+      <span>Escribe el nombre de tu musica favorita en el buscador</span>
+    </div>
+    <div class="banner-video-detail" *ngFor="let ba of resul" #list>
       <div class="box-music">
         <button class="btn-play">
           <i class="fas fa-play"></i>
         </button>
-        <img class="cover-page-music" src="https://s3.amazonaws.com/virginia.webrand.com/virginia/344/pGRntGEw72Z/69ee62801052192491bf9e9ec4adfe26.jpg?1603781877" alt="">
+        <img class="cover-page-music" [src]="ba.album.cover_medium" alt="">
       </div>
       <div class="img-banner-cover-page">
         <div class="background"></div>
         <div class="info-music">
-          <h1 class="bolt-one">Adele 21</h1>
+          <h1 class="bolt-one">{{ba.artist.name}}</h1>
           <div class="d-flex">
-            <span class="regular-two info-more">Lo mejor de Adele</span>
-            <span class="inf-fans">321, 123 seguidores</span>
+            <span class="regular-two info-more">Lo mejor de {{ba.artist.name}}</span>
+            <span class="inf-fans">{{ba.rank}} seguidores</span>
           </div>
-          <p class="description">{{description}}</p>
+          <p class="description">{{ba.artist.name}} {{description}}</p>
           <div class="btns-play-music d-flex">
             <button type="submit">Reproducir</button>
             <button type="submit">Seguir</button>
@@ -44,7 +48,9 @@ Fecha: Mmiercoles, 14 abril de 2021
             </div>
           </div>
         </div>
-        <img src="https://res.cloudinary.com/unjfsc/image/upload/v1618450461/Foxbel-Music/adele-wallpaper_e9tqbf.png" alt="">
+        <div class="img-banner">
+          <img [src]="ba.artist.picture_xl" alt="">
+        </div>
       </div>
     </div>
     <app-resultado></app-resultado>
