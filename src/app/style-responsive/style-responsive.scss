@@ -52,5 +52,33 @@
   .content-list-music {
     justify-content: space-around !important;
   }
+  .footer img {
+    display: none;
+  }
+  .wrap-3 {
+    .vol input {
+      display: none;
+    }
+  }
+  .vol:hover {
+    input {
+      display: inline !important;
+      top: -56px !important;
+      position: absolute !important;
+      left: -106px !important;
+    }
+  }
+
+  .slider {
+    background: $redPrincipal !important;
+  }
+
+  .slider::-webkit-slider-thumb {
+    background: $darkRedSecondary !important;
+  }
+
+  .slider::-moz-range-thumb {
+    background: #d92e2e !important;
+  }
 
 }

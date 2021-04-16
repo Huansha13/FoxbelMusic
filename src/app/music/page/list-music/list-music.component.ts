@@ -11,6 +11,8 @@ export class ListMusicComponent implements OnInit {
   check: boolean = true;
   name: string = 'Huansha L.';
   show: boolean;
+  volume: number = 0.5;
+  audio = new Audio();
   get resul() {
     return this.musicService.resultadoBaner;
   }
@@ -33,5 +35,10 @@ export class ListMusicComponent implements OnInit {
     this.musicService.banerMusic(valor);
     console.log(valor);
     this.txtBuscar.nativeElement.value = '';
+  }
+
+  setVolume(event: any) {
+    const volume = event.target.value / 100;
+    this.audio.volume = volume;
   }
 }
