@@ -1,10 +1,12 @@
 @import "src/styles";
+@import "src/app/style-responsive/style-responsive";
 
 // section nav
-nav {
+.nav {
   width: 330px;
   height: calc(100vh - 100px);
   background: $darkRedSecondary;
+  overflow: auto;
 }
 .logo {
   padding-top: 50px;
@@ -70,22 +72,3 @@ nav {
   }
 }
 // end nav
-
-
-//mobile
-@media (max-width: 720px) {
-  //nav {
-  //  left: -100%;
-  //  position: absolute;
-  //  z-index: 2;
-  //}
-  //#menu:checked {
-  //  nav {
-  //    transition: all 0.5s;
-  //    left: 0;
-  //  }
-  //}
-  .logo {
-    padding-top: 106px !important;
-  }
-}

@@ -1,0 +1,71 @@
+@import "src/styles";
+@import "src/app/style-responsive/style-responsive";
+
+/* Section results*/
+.resultados {
+  margin-top: 40px;
+  h1 {
+    color: $redPrincipal;
+    margin: 0 0 0;
+  }
+}
+.content-list-music {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.portada-option-play {
+  position: relative;
+  img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+  }
+}
+.box-r-music {
+  margin-bottom: 20px;
+}
+.btn-r-play {
+  position: absolute;
+  display: inline;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  i {
+    font-size: 36px;
+    color: #fff;
+  }
+}
+.options {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  div {
+    width: 4px;
+    height: 4px;
+    background: #FFFFFF;
+    margin-bottom: 3px;
+    border-radius: 50%;
+  }
+}
+.info-music-author {
+  margin-top: 5px;
+  h1, h2 {
+    margin: 0 0 0;
+  }
+}
+.name-music {
+  color: #555555 !important;
+}
+.name-author {
+  font-weight: 400;
+  color: #828282;
+  padding-bottom: 5px;
+}

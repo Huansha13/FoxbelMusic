@@ -12,7 +12,7 @@ Fecha: Mmiercoles, 14 abril de 2021
         <div (click)="mostarOcultar()" ><i class="fas fa-bars"></i></div>
       </div>
       <div class="search d-flex">
-        <input type="text" placeholder="Buscar">
+        <input type="text" placeholder="Buscar" (keyup.enter)="buscar( )" #txtBuscar>
         <span><i class="fas fa-search"></i></span>
       </div>
       <div class="usr d-flex">
@@ -47,26 +47,7 @@ Fecha: Mmiercoles, 14 abril de 2021
         <img src="https://res.cloudinary.com/unjfsc/image/upload/v1618450461/Foxbel-Music/adele-wallpaper_e9tqbf.png" alt="">
       </div>
     </div>
-    <div class="resultados">
-      <h1 class="bolt-one">Resultados</h1>
-      <div class="content-list-music">
-        <div class="box-r-music" *ngFor="let i of [1,1,1,1,1]">
-          <div class="portada-option-play" >
-            <button class="btn-r-play">
-              <i class="fas fa-play"></i>
-            </button>
-            <div class="options">
-              <div *ngFor="let i of [1,1,1]"></div>
-            </div>
-            <img src="https://img.freepik.com/foto-gratis/vista-aerea-auriculares-conectados-telefono-celular-sobre-fondo-amarillo_23-2147926827.jpg?size=626&ext=jpg" alt="">
-          </div>
-          <div class="info-music-author">
-            <h1 class="name-music bol-qs">The 20 20 Experience</h1>
-            <h2 class="name-author regular-qs">Jessie J</h2>
-          </div>
-        </div>
-      </div>
-    </div>
+    <app-resultado></app-resultado>
   </div>
   <div class="footer d-flex">
     <div class="wrap-1 d-flex">
