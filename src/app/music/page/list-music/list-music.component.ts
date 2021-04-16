@@ -10,6 +10,7 @@ export class ListMusicComponent implements OnInit {
   description: string = '(Tottenham, Londres, Inglaterra, 5 de mayo de 1988), conocida simplemente como Adele, es una cantante, compositora y multinstrumentista británica.8';
   check: boolean = true;
   name: string = 'Huansha L.';
+  show: boolean;
   get resul() {
     return this.musicService.resultadoBaner;
   }
