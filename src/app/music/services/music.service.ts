@@ -20,7 +20,7 @@ export class MusicService {
       .set('q', query)
       .set('rapidapi-key', this.key)
       .set('rapidapi-host', this.host)
-      .set('limit', '38');
+      .set('limit', '25');
     this.http.get<DeezerSearch>(`${this.serviceUrl}/search`, {params})
       .subscribe( (resp: DeezerSearch) => {
         this.resultados = resp.data;
@@ -28,7 +28,7 @@ export class MusicService {
 
       this.banerMusic(query);
   }
-  
+
   banerMusic( query: string = ''): void {
     const params = new HttpParams()
       .set('q', query)
