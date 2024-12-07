@@ -20,6 +20,7 @@ export class ListMusicComponent implements OnInit {
   constructor( private musicService: MusicService ) { }
 
   ngOnInit(): void {
+    this.musicService.buscarMusic("Nuevas Canciones");
   }
   mostarOcultar(): void {
     this.check = !this.check;
@@ -33,7 +34,6 @@ export class ListMusicComponent implements OnInit {
     }
     this.musicService.buscarMusic(valor);
     this.musicService.banerMusic(valor);
-    console.log(valor);
     this.txtBuscar.nativeElement.value = '';
   }
 

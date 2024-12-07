@@ -20,7 +20,7 @@ Fecha: Mmiercoles, 14 abril de 2021
         <h4 class="name-usr">{{name}}</h4>
       </div>
     </div>
-    <div class="write-txt" *ngIf="!show">
+    <div class="write-txt" *ngIf="resul.length == 0">
       <i class="fas fa-headphones-alt"></i>
       <span>Escribe el nombre de tu musica favorita en el buscador</span>
     </div>
@@ -60,7 +60,7 @@ Fecha: Mmiercoles, 14 abril de 2021
   </div>
   <div class="footer d-flex">
     <div class="wrap-1 d-flex">
-      <img src="https://www.cice.es/wp-content/uploads/2018/05/imagen-destacada-5.jpg" alt="">
+      <i style="font-size: 35px;color: white;padding-left: 15px;" class="fas fa-headphones-alt"></i>
       <div class="section-info-music-author">
         <h3 class="bol-qs">Canción</h3>
         <h4 class="regular-qs">Artista - Álbum</h4>

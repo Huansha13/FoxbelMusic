@@ -23,10 +23,12 @@ export class MusicService {
       .set('limit', '38');
     this.http.get<DeezerSearch>(`${this.serviceUrl}/search`, {params})
       .subscribe( (resp: DeezerSearch) => {
-        console.log(resp.data);
         this.resultados = resp.data;
       });
+
+      this.banerMusic(query);
   }
+  
   banerMusic( query: string = ''): void {
     const params = new HttpParams()
       .set('q', query)
@@ -35,7 +37,6 @@ export class MusicService {
       .set('limit', '1');
     this.http.get<DeezerSearch>(`${this.serviceUrl}/search`, {params})
       .subscribe((resp: DeezerSearch) => {
-        console.log(resp.data);
         this.resultadoBaner = resp.data;
       });
   }
